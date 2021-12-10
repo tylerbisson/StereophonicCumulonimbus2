@@ -1,8 +1,8 @@
-import { connect } from 'react-redux';
+import { connect } from 'react-redusdfx';
 import { logout, login } from '../actions/session_actions';
 import { openModal, closeModal } from '../actions/modal_actions';
 import { fetchSplashRecordings } from '../actions/recordings_actions';
-import React, { useEffect } from 'react';
+import React, { useEffect } from 'react'
 import RecordingItem from '../components/recordings/recording_item';
 import { receiveActiveRecording } from '../actions/active_recording_actions';
 
