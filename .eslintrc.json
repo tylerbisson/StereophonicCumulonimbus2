@@ -2,6 +2,7 @@
   "extends": ["airbnb", "next/core-web-vitals", "prettier"],
   "rules": {
     "react/function-component-definition": 0,
-    "react/jsx-filename-extension": 0
+    "react/jsx-filename-extension": 0,
+    "react/jsx-indent": 1
   }
 }

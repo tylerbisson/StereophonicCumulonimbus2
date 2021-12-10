@@ -1,0 +1,170 @@
+.greetingHero{
+  margin: auto;
+  height: 425px;
+  width: 1240px;
+  background-position: right 35% bottom 80%;
+  background-size: 100%;
+  font-size: 20px;
+  border-top: solid;
+  border-color: rgb(255, 84, 10);
+  border-width: 4px;
+}
+
+.loginSignup {
+  margin-top: 12px;
+  height: 50px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 16px; 
+  color: white; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 100%;
+  width: auto;
+}
+
+.navButtonboxLeftSplash {
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+  color: #ebeff4;
+  font-style: italic;
+  letter-spacing: 2px;
+  margin-left: 15px;
+}
+
+.heroSlogan{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 35px; 
+  color: white; 
+  position: relative;
+  top: 25%;
+  text-align: center
+}
+
+.demo-button{
+  margin-top: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 1px solid rgb(255, 84, 10);
+  background-color: rgb(255, 84, 10);
+  padding: 10px;
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(232, 234, 237, 0.8);
+  z-index: 10;
+}
+
+.modal-child {
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-form-box{
+  padding-top: 20px;
+  width: 400px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+
+.login-input{
+width: 100%;
+padding: 10px;
+display: flex;
+border-radius: 5px;
+border: 1px solid darkgrey;
+justify-content: center;
+display: inline-block;
+box-sizing: border-box;
+}
+
+.session-submit{
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(255, 84, 10);
+  text-align: center;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.modal-message{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 35px; 
+  color: black; 
+  position: relative;
+  top: -10%;
+  text-align: center;
+}
+
+.modal-errors{
+  margin-top: 20px;
+  text-align: center;
+}
+
+.modal-profile-picture{
+  margin-top: 30px;
+  height: 150px;
+  width: 150px;
+  margin-left: 124px;
+  margin-right: 124px;
+  border-radius: 100%;
+  position: relative;
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover; 
+  border-radius: 100%;
+  border: 1px solid lightgray;
+}
+
+.modal-profile-picture-file-input{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  opacity: 0;
+}
+
+.modal-profile-picture-label{
+  margin-top: 10px;
+  text-align: center;
+}
+
+.splashRecordingsHeader{
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.splashRecordingsList{
+    height: 550px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    font-family: 'Quicksand', sans-serif;
+}
