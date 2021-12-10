@@ -1,0 +1,44 @@
+// schema.prisma
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Comment {
+  id        Int       @id @default(autoincrement())
+  content   String
+  createdAt DateTime  @default(now()) @map(name: "created_at")
+  updatedAt DateTime  @updatedAt @map(name: "updated_at")
+  author    User      @relation(fields: [authorId], references: [id])
+  authorId  Int
+  target    Recording @relation(fields: [targetId], references: [id])
+  targetId  Int
+}
+
+model Recording {
+  id          Int       @id @default(autoincrement())
+  title       String
+  genre       String
+  description String?
+  createdAt   DateTime  @default(now()) @map(name: "created_at")
+  updatedAt   DateTime  @updatedAt @map(name: "updated_at")
+  author      User      @relation(fields: [authorId], references: [id])
+  comments    Comment[]
+  authorId    Int
+}
+
+model User {
+  id         Int         @id @default(autoincrement())
+  username   String      @unique
+  email      String      @unique
+  createdAt  DateTime    @default(now()) @map(name: "created_at")
+  updatedAt  DateTime    @updatedAt @map(name: "updated_at")
+  recordings Recording[]
+  comments   Comment[]
+
+  @@map(name: "users")
+}
