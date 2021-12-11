@@ -1,5 +1,5 @@
 import nc from 'next-connect';
-import prisma from '../../../lib/prisma';
+import prisma from 'lib/prisma';
 // import cors from 'cors';
 
 const handler = nc()
