@@ -168,3 +168,9 @@ box-sizing: border-box;
     align-content: flex-start;
     font-family: 'Quicksand', sans-serif;
 }
+
+.splashRecordings{
+    background-color: white;    
+    width: 1240px;
+    margin: auto;
+}
