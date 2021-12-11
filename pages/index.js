@@ -64,8 +64,7 @@ const Splash = ({ splashRecordings }) =>
       </ul>
     </section>
   </Layout>
-)
-  ;
+);
 
 export default Splash;
 
