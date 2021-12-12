@@ -3,7 +3,7 @@ const theme = {
     body: 'sans-serif',
   },
   colors: {
-    scOrange: 'rgb(255, 84, 10)',
+    scOrange: '#ff540a',
   },
   page: {
     width: '100%',
