@@ -2,9 +2,6 @@
 import RecordingItem from 'components/recordingItem';
 import Image from 'next/image';
 import Layout from 'components/layout';
-import CONFIG from 'config';
-
-const { appHost } = CONFIG;
 
 const Splash = ({ splashRecordings }) => (
   <Layout>
@@ -76,7 +73,7 @@ const Splash = ({ splashRecordings }) => (
 export default Splash;
 
 export async function getStaticProps() {
-  const res = await fetch(`${appHost}/api/recordings`);
+  const res = await fetch(`${process.env.APP_HOST}/api/recordings`);
   const splashRecordings = await res.json();
   return {
     props: { splashRecordings }
