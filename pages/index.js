@@ -1,69 +1,76 @@
+/** @jsxImportSource theme-ui */
 import RecordingItem from 'components/recordingItem';
 import Image from 'next/image';
-import s from 'styles/splash.module.css';
 import Layout from 'components/layout';
 import CONFIG from 'config';
 
 const { appHost } = CONFIG;
 
-const Splash = ({ splashRecordings }) =>
-// useEffect(() => {
-//     props.fetchSplashRecordings();
-// }, [])
-
-// CANT REMEMBER WHAT THE POINT OF THIS IS 2/6/20
-// useEffect(() => {
-//     if (prevProps.currentUser !== props.currentUser && !props.currentUser) {
-//         props.fetchSplashRecordings();
-//     }
-// })
-
-// const handleDemoLogin = () => {
-//     props.demoLogin({ username: "Tyler Bisson", password: 'password' })
-//         .then(data => {
-//             props.history.push(`/discover`)
-//         });
-// }
-
-// let recordingItems = Object.values(props.recordings);
-// if (Object.keys(props.recordings).length < 1) {
-//     recordingItems = null;
-// } else {
-//     let recordings = Object.values(props.recordings);
-
-//     recordingItems = recordings.map(recording =>
-//         <RecordingItem recording={recording} key={recording.id}
-//             receiveActiveRecording={props.receiveActiveRecording}
-//             activeRecording={props.activeRecording} />)
-// }
-
-(
+const Splash = ({ splashRecordings }) => (
   <Layout>
-    <section className={s.greetingHero} style={{ backgroundImage: "url('/images/hero.jpg')" }}>
-      <nav className={s.loginSignup}>
-        <div className="nav-buttonbox-left-splash">
-          <Image width='100%' height='100%' alt="stereophonic cumulonimbus logo" className={s.logo} src="/images/cloud_logo.png" />
-          <h1>STEREOPHONIC CUMULONIMBUS</h1>
-        </div>
-        <div className={s.navButtonboxRight}>
-          <button className={s.navLogin} type="button">Sign in</button>
-          &nbsp;&nbsp;
-          <button className={s.navSignup} type="button">Create account</button>
+    <section sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      height: ['12rem', '20rem', '40rem'],
+      color: 'white',
+      backgroundImage: "url('/images/hero.jpg')",
+      backgroundSize: '100%',
+      borderTop: 'solid',
+      borderColor: 'scOrange',
+      borderWidth: '4px'
+    }}>
+      <nav>
+        <div sx={{
+          display: 'flex',
+          alignItems: 'center',
+          fontStyle: 'italic',
+          letterSpacing: '2px',
+          marginLeft: '15px',
+        }}>
+          <Image width={92} height={50} alt="stereophonic cumulonimbus logo" src="/images/cloud_logo.png" />
+          <span sx={{ textTransform: 'uppercase', fontSize: [16, 20], marginLeft: ['.25rem', '.5rem'] }}>stereophonic cumulonimbus</span>
         </div>
       </nav>
-      <div className={s.heroSlogan}>
-        <h1>What's next in music is first on Stereophonic Cumulonimbus</h1>
-        <button className={s.demoButton} type="button">Login as Demo User</button>
+      <div sx={{
+        display: 'flex',
+        height: '100%',
+        justifyContent: 'center',
+      }}>
+        <div sx={{
+          display: 'flex',
+          alignItems: 'center',
+          fontSize: [16, 30, 45],
+          width: '80%',
+        }}>
+          <h1>What&apos;s next in music is first on Stereophonic Cumulonimbus</h1>
+        </div>
       </div>
     </section>
-    <section className={s.splashRecordings}>
-      <h1 className={s.splashRecordingsHeader}>
-        Hear what's trending for free in the cult of Stereophonic Cumulonimbus</h1>
-      <ul className={s.splashRecordingsList}>
-        {splashRecordings.map((r) => <RecordingItem key={r.id} recording={r} />)}
+    <section sx={{
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center'
+    }}>
+      <h1 sx={{
+        textAlign: 'center',
+        fontSize: ['1rem', '2rem'],
+        marginBottom: '10px',
+        paddingTop: '10px'
+      }}>
+        Hear what&apos;s trending for free in the cult of Stereophonic Cumulonimbus</h1>
+      <ul sx={{
+        display: 'grid',
+        padding: '0 1rem 0 1rem',
+        gridTemplateColumns: ['repeat(2, 1fr)', 'repeat(4, 1fr)', 'repeat(6, 1fr)'],
+        gap: '1rem',
+        margin: '1rem',
+        width: '100%',
+      }}>
+        {splashRecordings.slice(0, 12).map((r) => <RecordingItem key={r.id} recording={r} />)}
       </ul>
     </section>
-  </Layout>
+  </Layout >
 );
 
 export default Splash;

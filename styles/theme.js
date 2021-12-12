@@ -1,17 +1,15 @@
-import { roboto } from '@theme-ui/presets';
-
 const theme = {
-  ...roboto,
-  containers: {
-    page: {
-      width: '100%',
-      maxWidth: '60px',
-      m: 0,
-      mx: 'auto',
-    }
+  fonts: {
+    body: 'sans-serif',
   },
-  styles: {
-    ...roboto.styles
+  colors: {
+    scOrange: 'rgb(255, 84, 10)',
+  },
+  page: {
+    width: '100%',
+    maxWidth: '60px',
+    m: 0,
+    mx: 'auto',
   }
 };
 
