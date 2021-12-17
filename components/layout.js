@@ -6,7 +6,9 @@ export default function Layout({ children }) {
       width: [null, null, '100%'],
       fontFamily: 'body'
     }}>
-      {children}
+      <main>
+        {children}
+      </main>
     </div>
   );
 };

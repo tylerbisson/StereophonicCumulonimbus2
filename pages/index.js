@@ -2,9 +2,13 @@
 import RecordingItem from 'components/recordingItem';
 import Image from 'next/image';
 import Layout from 'components/layout';
+import Head from 'next/head';
 
 const Splash = ({ splashRecordings }) => (
   <Layout>
+    <Head>
+      <title>Stereophonic Cumulonimbus splash page</title>
+    </Head>
     <section sx={{
       display: 'flex',
       flexDirection: 'column',
@@ -17,7 +21,7 @@ const Splash = ({ splashRecordings }) => (
       borderColor: 'scOrange',
       borderWidth: '4px'
     }}>
-      <nav>
+      <div>
         <div sx={{
           display: 'flex',
           alignItems: 'center',
@@ -28,7 +32,7 @@ const Splash = ({ splashRecordings }) => (
           <Image width={92} height={50} alt="stereophonic cumulonimbus logo" src="/images/cloud_logo.png" />
           <span sx={{ textTransform: 'uppercase', fontSize: [16, 20], marginLeft: ['.25rem', '.5rem'] }}>stereophonic cumulonimbus</span>
         </div>
-      </nav>
+      </div>
       <div sx={{
         display: 'flex',
         height: '100%',
@@ -56,7 +60,7 @@ const Splash = ({ splashRecordings }) => (
         paddingTop: '10px'
       }}>
         Hear what&apos;s trending for free in the cult of Stereophonic Cumulonimbus</h1>
-      <ul sx={{
+      <div sx={{
         display: 'grid',
         padding: '0 1rem 0 1rem',
         gridTemplateColumns: ['repeat(2, 1fr)', 'repeat(4, 1fr)', 'repeat(6, 1fr)'],
@@ -65,7 +69,7 @@ const Splash = ({ splashRecordings }) => (
         width: '100%',
       }}>
         {splashRecordings.slice(0, 12).map((r) => <RecordingItem key={r.id} recording={r} />)}
-      </ul>
+      </div>
     </section>
   </Layout >
 );
